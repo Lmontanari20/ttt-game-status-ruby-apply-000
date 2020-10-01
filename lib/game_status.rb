@@ -57,7 +57,7 @@ def over?(board)
   false
 end
 
-def winner?(board)
+def winner(board)
   win_index = won?(board)
   if(win_index == nil)
     return nil
