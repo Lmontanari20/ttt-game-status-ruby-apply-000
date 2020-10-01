@@ -29,4 +29,30 @@ def won?(board)
   end
   false
 end
+
+def full?(board)
+  board.each do |placement|
+    if placement == "" || placement == " " || placement == nil
+      return false
+    end
+  end
+  return TRUE
+end
+
+def draw?(board)
+  if won?(board)
+    return false
+  end
   
+  if !full?(board)
+    return false
+  end
+  return true
+end
+
+def over?(board)
+  if won?(board) || draw?(board) || full?(board)
+    return true
+  end
+  false
+end
